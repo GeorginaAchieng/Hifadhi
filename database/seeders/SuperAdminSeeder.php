@@ -36,6 +36,14 @@ class SuperAdminSeeder extends Seeder
             'email' => '',
             'password' => Hash::make('')
         ]);
-        $appointmentManager->assignRole('appointment Manager');
+        $appointmentManager->assignRole('appointmentManager');
+
+         // Creating Client User
+         $client = User::create([
+            'name' => '', 
+            'email' => '',
+            'password' => Hash::make('')
+        ]);
+        $client->assignRole('client');
     }
 }

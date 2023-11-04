@@ -31,5 +31,12 @@ class RoleSeeder extends Seeder
             'edit-appointment',
             'delete-appointment'
         ]);
+
+
+        $client->givePermissionTo([
+            'create-appointment',
+            'edit-appointment',
+            'delete-appointment'
+        ]);
     }
 }

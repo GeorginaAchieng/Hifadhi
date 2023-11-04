@@ -11,8 +11,12 @@
             <thead>
                 <tr>
                 <th scope="col">S#</th>
-                <th scope="col">Date</th>
-                <th scope="col">appointmentType</th>
+                <th scope="col">Visit-Date</th>
+                <th scope="col">Client</th>
+                <th scope="col">Age</th>
+                <th scope="col">Sex</th>
+                <th scope="col">Appointment-Type</th>
+                <th scope="col">Next-Appointment-Date</th>
                 <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -21,7 +25,11 @@
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $appointment->date }}</td>
+                    <td>{{ $appointment->client }}</td>
+                    <td>{{ $appointment->age }}</td>
+                    <td>{{ $appointment->sex }}</td>
                     <td>{{ $appointment->appointmentType}}</td>
+                    <td>{{ $appointment->nextAppointmentDate}}</td>
                     <td>
                         <form action="{{ route('appointments.destroy', $appointment->id) }}" method="post">
                             @csrf

@@ -6,6 +6,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AppointmentController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,4 +30,6 @@ Route::resources([
     'roles' => RoleController::class,
     'users' => UserController::class,
     'appointments' => AppointmentController::class,
+    
 ]);
+
