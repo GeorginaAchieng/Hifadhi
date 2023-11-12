@@ -22,7 +22,7 @@
                     <div class="mb-3 row">
                         <label for="date" class="col-md-4 col-form-label text-md-end text-start">Date</label>
                         <div class="col-md-6">
-                          <input type="text" class="form-control @error('date') is-invalid @enderror" id="date" name="date" value="{{ $appointment->name }}">
+                          <input type="text" class="form-control @error('date') is-invalid @enderror" id="date" name="date" value="{{ $appointment->date }}">
                             @if ($errors->has('date'))
                                 <span class="text-danger">{{ $errors->first('date') }}</span>
                             @endif
@@ -62,7 +62,7 @@
                     <div class="mb-3 row">
                         <label for="appointmentType" class="col-md-4 col-form-label text-md-end text-start">appointmentType</label>
                         <div class="col-md-6">
-                            <textarea class="form-control @error('appointmentType') is-invalid @enderror" id="appointmentType" name="appointmentType">{{ $appointment->description }}</textarea>
+                            <textarea class="form-control @error('appointmentType') is-invalid @enderror" id="appointmentType" name="appointmentType">{{ $appointment->appointment }}</textarea>
                             @if ($errors->has('appointmentType'))
                                 <span class="text-danger">{{ $errors->first('appointmentType') }}</span>
                             @endif
