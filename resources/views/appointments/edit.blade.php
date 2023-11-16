@@ -38,6 +38,18 @@
                             @endif
                         </div>
 
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Profile Pic</label>
+                            <div class="col-sm-9">
+                              <input type="file" class="form-control" name="image" @error('image') is-invalid @enderror>
+                            </div>
+                            @error('image')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
                         <div class="mb-3 row">
                             <label for="age" class="col-md-4 col-form-label text-md-end text-start">Age</label>
                             <div class="col-md-6">

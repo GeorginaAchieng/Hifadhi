@@ -48,6 +48,7 @@ class AppointmentController extends Controller
         Appointment::create($request->all());
         return redirect()->route('appointments.index')
                 ->withSuccess('New appointment is added successfully.');
+                
     }
 
     /**
@@ -78,6 +79,7 @@ class AppointmentController extends Controller
         $appointment->update($request->all());
         return redirect()->back()
                 ->withSuccess('Appointment is updated successfully.');
+                
     }
 
     /**

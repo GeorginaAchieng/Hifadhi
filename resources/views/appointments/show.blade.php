@@ -31,6 +31,16 @@
                     </div>
 
                     <div class="row">
+                        <label for="image" class="col-md-4 col-form-label text-md-end text-start"><strong>Profile_pic:</strong></label>
+                        <div class="col-md-6" style="line-height: 35px;">
+                            <div class="col-sm-9">
+                                <input type="file" class="form-control" name="image" @error('image') is-invalid @enderror>
+                              </div>
+                            {{ $appointment->image }}
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <label for="age" class="col-md-4 col-form-label text-md-end text-start"><strong>Age:</strong></label>
                         <div class="col-md-6" style="line-height: 35px;">
                             {{ $appointment->age }}

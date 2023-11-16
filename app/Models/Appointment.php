@@ -13,6 +13,7 @@ class Appointment extends Model
     protected $fillable = [
         'date',
         'client',
+        'image',
         'age',
         'sex',
         'appointmentType',

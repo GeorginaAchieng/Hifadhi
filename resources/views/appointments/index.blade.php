@@ -13,6 +13,7 @@
                 <th scope="col">S#</th>
                 <th scope="col">Visit-Date</th>
                 <th scope="col">Client</th>
+                <th scope="col">Profile_Pic</th>
                 <th scope="col">Age</th>
                 <th scope="col">Sex</th>
                 <th scope="col">Appointment-Type</th>
@@ -26,6 +27,13 @@
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $appointment->date }}</td>
                     <td>{{ $appointment->client }}</td>
+                    <td>
+                        @if($appointment->image)
+                        <img src="{{ asset('/assets/img/'.$appointment->image) }}" style="height: 20px;width:20px;">
+                        @else 
+                        <span>No image found!</span>
+                        @endif
+                    </td>
                     <td>{{ $appointment->age }}</td>
                     <td>{{ $appointment->sex }}</td>
                     <td>{{ $appointment->appointmentType}}</td>

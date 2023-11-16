@@ -255,8 +255,8 @@
               <div class="circle-shape bg-accent text-white">
                 <span class="mai-basket"></span>
               </div>
-              <p><span>Hifadhi</span>-Packages</p>
-            </div>
+              <a href="hifadhipackages">Hifadhi <span>-Packages</a>        
+           </div>
           </div>
         </div>
       </div>
@@ -303,7 +303,7 @@
             <li><a href="about us">About Us</a></li>
             <li><a href="career">Career</a></li>
             <li><a href="editorial team">Editorial Team</a></li>
-            <li><a href="protection">Protection</a></li>
+            <li><a href="#">Protection</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-3 py-3">

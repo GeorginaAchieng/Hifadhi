@@ -32,4 +32,8 @@ Route::resources([
     'appointments' => AppointmentController::class,
     
 ]);
+use App\Http\Controllers\HifadhipackagesController;
+ 
+Route::get('/hifadhipackages', [HifadhipackagesController::class, 'create']);
+Route::post('/hifadhipackages', [HifadhipackagesController::class, 'store']);
 

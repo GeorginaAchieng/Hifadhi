@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->date('date');
             $table->text('client');
+            $table->string('image')->nullable();
             $table->int('age');
             $table->text('sex');
             $table->text('appointmentType');
