@@ -20,8 +20,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    HifadhiApp.com
+                <a class="navbar-brand" href="{{ url('/dashboard') }}">
+                    HifadhiApp
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -92,16 +92,16 @@
                             </div>
                         @endif
 
-                        <h3 class="text-center mt-3 mb-3">Hifadhi - <a href="https://www.hifadhiapp.com/">Hifadhi.com</a></h3>
+                        <h3 class="text-center mt-3 mb-3">HifadhiApp</h3>
                         @yield('content')
                         
                         <div class="row justify-content-center text-center mt-3">
                             <div class="col-md-12">
                                 <p>Back to Hifadhi: 
-                                    <a href="https://www.hifadhiapp/"><strong>Hifadhi Link</strong></a>
+                                    <a href="/hifadhi" class="btn btn-hover btn-primary">Hifadhi Link</a>
                                 </p>
                                 <p>
-                                    For More Appointment packages Visit: <a href="https://www.allphptricks.com/"><strong>Hifadhi.com</strong></a>
+                                    For More Appointment packages Visit: <a href="/hifadhipackages" class="btn btn-outline btn-success">Hifadhi Packages</a>
                                 </p>
                             </div>
                         </div>
@@ -112,5 +112,4 @@
             </div>
         </main>
     </div>
-</body>
-</html>
+

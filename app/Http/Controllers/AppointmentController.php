@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Appointment;
 use App\Http\Requests\StoreAppointmentRequest;
 use App\Http\Requests\UpdateAppointmentRequest;
+use App\Exports\AppointmentsExport;
+use App\Imports\AppointmentsImport;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+
 
 class AppointmentController extends Controller
 {
@@ -15,11 +18,11 @@ class AppointmentController extends Controller
      */
     public function __construct()
     {
-    //    $this->middleware('auth');
+       $this->middleware('auth');
     //    $this->middleware('permission:create-appointment|edit-appointment|delete-appointment', ['only' => ['index','show']]);
-    //    $this->middleware('permission:create-appointment', ['only' => ['create','store']]);
-    //    $this->middleware('permission:edit-appointment', ['only' => ['edit','update']]);
-    //    $this->middleware('permission:delete-appointment', ['only' => ['destroy']]);
+       $this->middleware('permission:create-appointment', ['only' => ['create','store']]);
+       $this->middleware('permission:edit-appointment', ['only' => ['edit','update']]);
+       $this->middleware('permission:delete-appointment', ['only' => ['destroy']]);
     }
 
     /**
@@ -92,6 +95,8 @@ class AppointmentController extends Controller
                 ->withSuccess('Appointment is deleted successfully.');
     }
 
+
+   
 
      
 
